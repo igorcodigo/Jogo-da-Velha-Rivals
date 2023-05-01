@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jogo da Nova</title>
+	<style type="text/css">
+		td {
+			border: 1px solid black;
+			width: 128px;
+			height: 128px;
+			text-align: center;
+			font-size: 60px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+		var player = 1;
+		var moves = 0;
+		var fim = 0;
+		function makeMove(element) {
+			if (element.innerHTML === '') {
+				if (player === 1) {
+					element.innerHTML = '<img src="x-image.png.png" alt="X" />';
+					player = 2;
+				} else {
+					element.innerHTML = '<img src="progress.png" alt="O" />';
+					player = 1;
+				}
+				moves++;
+				checkForWin();
+			}
+		}
+		function checkForWin() {
+			var cells = document.getElementsByTagName('td');
+			var combinations = [
+				[0, 1, 2],
+				[3, 4, 5],
+				[6, 7, 8],
+				[0, 3, 6],
+				[1, 4, 7],
+				[2, 5, 8],
+				[0, 4, 8],
+				[2, 4, 6]
+			];
+			for (var i = 0; i < combinations.length; i++) {
+    if (cells[combinations[i][0]].innerHTML !== '' &&
+      cells[combinations[i][0]].innerHTML === cells[combinations[i][1]].innerHTML &&
+      cells[combinations[i][1]].innerHTML === cells[combinations[i][2]].innerHTML) {
+      var winner = cells[combinations[i][0]].innerHTML;
+      if (winner.includes("X")) {
+        alert("Você derrotou a sodomia, caro irmão");
+      } else if (winner.includes("O")) {
+        alert("O amor venceu!🏳️‍🌈");
+      }
+      reset();
+      return;
+    }
+  }
+			if (moves === 9) {
+				alert('Deu empate cornos');
+				reset();
+			}
+		}
+		function reset() {
+			var cells = document.getElementsByTagName('td');
+			for (var i = 0; i < cells.length; i++) {
+				cells[i].innerHTML = '';
+			}
+			player = 1;
+			moves = 0;
+			fim =0;
+		}
+	</script>
+</head>
+<body>
+	<h1>Jogo da Nova</h1>
+	<table>
+		<tr>
+			<td onclick="makeMove(this)"></td>
+			<td onclick="makeMove(this)"></td>
+			<td onclick="makeMove(this)"></td>
+		</tr>
+		<tr>
+			<td onclick="makeMove(this)"></td>
+			<td onclick="makeMove(this)"></td>
+			<td onclick="makeMove(this)"></td>
+		</tr>
+		<tr>
+			<td onclick="makeMove(this)"></td>
+			<td onclick="makeMove(this)"></td>
+			<td onclick="makeMove(this)"></td>
+		</tr>
+	</table>
+</body>
+</html>
