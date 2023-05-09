@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0038)file:///C:/Users/igor1/Desktop/v2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 	<title>Jogo da Nova</title>
 	<style type="text/css">
 		body {
@@ -9,47 +9,38 @@
   			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			height: 100vh;
+			height: 100%;
 			margin: 0;
 		}
 		.container {
 			position: relative;
-			display: flex;
 			
 			text-align: center;
 		}
 		div2 {
 			position: relative;
-			display: flex;
 			clear: left;
 			text-align: center;
 		}
 		table {
-			width: 80vh;
-			height: 80vh;
 			border-collapse: collapse;
-			margin: 0 auto;
-		}
-		tr{
-			
+			margin: 2vh auto 5vh;
 		}
 		td {
 			border: 1px solid black;
-			width: 5vh;
-			height: 5vh;
+			width: 30vh;
+			height: 30vh;
 			text-align: center;
-			font-size: 10px;
-			font-weight: bold;
 			cursor: pointer;
 		}
 	</style>
-	<script src="velhaScript.js"></script>
+	<script src="./Jogo da Nova_files/velhaScript.js.download"></script>
 	
 </head>
 <body>
 	<h1 class="div2">Jogo da velha</h1>
 	<table>
-		<tr>
+		<tbody><tr>
 			<td onclick="makeMove(this)"></td>
 			<td onclick="makeMove(this)"></td>
 			<td onclick="makeMove(this)"></td>
@@ -64,6 +55,7 @@
 			<td onclick="makeMove(this)"></td>
 			<td onclick="makeMove(this)"></td>
 		</tr>
-	</table>
-</body>
-</html>
+	</tbody></table>
+
+
+</body></html>
