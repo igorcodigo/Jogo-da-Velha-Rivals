@@ -6,28 +6,39 @@
 	<style type="text/css">
 		body {
 			display: flex;
+  			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			height: 100vh;
 			margin: 0;
 		}
 		.container {
-			position: absolute;
-			top: 10%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			position: relative;
+			display: flex;
+			
+			text-align: center;
+		}
+		div2 {
+			position: relative;
+			display: flex;
+			clear: left;
 			text-align: center;
 		}
 		table {
+			width: 80vh;
+			height: 80vh;
 			border-collapse: collapse;
 			margin: 0 auto;
 		}
+		tr{
+			
+		}
 		td {
 			border: 1px solid black;
-			width: 128px;
-			height: 128px;
+			width: 5vh;
+			height: 5vh;
 			text-align: center;
-			font-size: 60px;
+			font-size: 10px;
 			font-weight: bold;
 			cursor: pointer;
 		}
@@ -36,9 +47,7 @@
 	
 </head>
 <body>
-	<div class="container">
-		<h1>Jogo da Nova</h1>
-	</div>
+	<h1 class="div2">Jogo da velha</h1>
 	<table>
 		<tr>
 			<td onclick="makeMove(this)"></td>
