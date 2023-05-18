@@ -56,7 +56,7 @@ var player = 1;
 		
 		function mensagem() {
 			if (ganhador == 1) {
-				alert("Órgão excretor não gera filhos 🗿🍷 ");
+				alert('“Não se deite com um homem como quem se deita com uma mulher” (Levítico 18:22) ');
 				} else if (ganhador == 2) {
 					alert("O amor venceu!🏳️‍🌈");
 					}
