@@ -66,9 +66,9 @@ function checkForWin() {
 
 function mensagem() {
     if (ganhador == 1) {
-        alert("Órgão excretor não gera filhos 🗿🍷 ");
+        alert("X izão ganhou 🗿 ");
     } else if (ganhador == 2) {
-        alert("O amor venceu!🏳️‍🌈");
+        alert("O Bolinha venceu 🍷");
     }
 }
 
