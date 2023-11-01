@@ -1,0 +1,27 @@
+/*Css estilos para meus sites locais*/
+
+label {
+    margin-left: ;
+  }
+button {
+    background-color:  ;
+    border-color:  ;
+    height: 50px;
+    width: 150px;
+    margin: 2px;
+  }
+  
+/* Fontes */
+/* Tamanho */
+.large {
+    font-size: 30px;	
+  }
+.medium {
+    font-size: 25px;
+  }
+.small {
+    font-size: 15px;
+  }
+.smaller {
+    font-size: 8px;
+  } /*é quase invisivel*/
