@@ -6,231 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>Jogo da Nova</title>
-    <style type="text/css">
-        #dropzone {
-            display: none;
-            position: relative;
-            top: ;
-            right: 500px;
-            bottom: 400px;
-            left: ;
-            width: 300px;
-            height: 300px;
-            border: 2px dashed gray;
-            padding: 20px;
-        }
-
-        #dropzone2 {
-            display: none;
-            position: relative;
-            top: ;
-            right: 500px;
-            bottom: 380px;
-            left: ;
-            width: 300px;
-            height: 300px;
-            border: 2px dashed gray;
-            padding: 20px;
-        }
-
-        #l1 {
-            display: flex;
-            color: white;
-            height: 100%;
-            width: 420px;
-            background-color: #f5af09;
-            position: relative;
-            right: 460px;
-            bottom: 300px;
-            font-size: 20px;
-            justify-content: center;
-            align-items: center;
-            font-family: "Montserrat", sans-serif;
-        }
-
-        #l2 {
-            display: flex;
-            color: white;
-            height: 100%;
-            width: 420px;
-            background-color: #f5af09;
-            position: relative;
-            right: 460px;
-            bottom: 280px;
-            font-size: 20px;
-            justify-content: center;
-            align-items: center;
-            font-family: "Montserrat", sans-serif;
-        }
-
-        .div2 {
-            margin-top: 10px;
-        }
-
-
-        h1 {
-            margin top: 10px;
-            margin-bottom: 40px;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-        }
-
-        table {
-            border-collapse: collapse;
-            margin: 0 auto;
-        }
-
-        td {
-            border: 8px solid pink;
-            border-radius: 10px;
-            width: 130px;
-            /* Adjust the width to your desired value in pixels */
-            height: 130px;
-            /* Adjust the height to your desired value in pixels */
-            font-size: 60px;
-            text-align: center;
-            cursor: pointer;
-            position: relative;
-        }
-
-        td img {
-            max-width: 100%;
-            max-height: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        td:first-child {
-            border-left: none;
-        }
-
-        td:last-child {
-            border-right: none;
-        }
-
-        tr:first-child td {
-            border-top: none;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-
-        .reset-button {
-            position: relative;
-            right: 0;
-            bottom: 150px;
-            left: 300px;
-            width: 100px;
-            height: 100px;
-            font-family: "Montserrat", sans-serif;
-        }
-
-        @media only screen and (min-device-width: 500px) and (max-device-width: 3000px) {
-            body {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin: 0;
-                height: 100vh;
-            }
-        }
-
-        /* Smartphones (portrait) ----------- */
-        @media only screen and (min-device-width: 1px) and (max-device-width: 450px) {
-
-            body {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin: 0;
-            }
-
-            h1 {
-                margin top: 50px;
-                margin-bottom: 100px;
-            }
-
-            td {
-                border: 16px solid pink;
-                border-radius: 10px;
-                width: 10vh;
-                /* Adjust the width to your desired value in pixels */
-                height: 10vh;
-                /* Adjust the height to your desired value in pixels */
-                font-size: 9vh;
-                text-align: center;
-                cursor: pointer;
-                position: relative;
-            }
-
-            #dropzone {
-                display: none;
-                position: inherit;
-                top: ;
-                right: 500px;
-                bottom: 400px;
-                left: ;
-                width: 30vh;
-                height: 3vh;
-                border: 2px dashed gray;
-                padding: 20px;
-            }
-
-            #dropzone2 {
-                display: none;
-                position: inherit;
-                top: ;
-                right: 1500px;
-                bottom: 3480px;
-                left: ;
-                width: 30vh;
-                height: 3vh;
-                border: 2px dashed gray;
-                padding: 20px;
-            }
-
-            .reset-button {
-                position: inherit;
-                margin-top: 4vh;
-                width: 30vh;
-                height: 5vh;
-                font-size: 40px;
-            }
-
-            #l1 {
-                top: 10px;
-                right: 0px;
-                bottom: 0px;
-                left: ;
-                width: 30vh;
-                height: 3vh;
-                font-size: 30px;
-            }
-
-            #l2 {
-                top: 20px;
-                right: 0px;
-                bottom: 0px;
-                left: ;
-                width: 30vh;
-                height: 3vh;
-                font-size: 30px;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
     <script src="javascript.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -263,20 +39,22 @@
     </table>
     <button class="reset-button" onclick="reset()">Reiniciar partida</button>
 
-    <input id="dropzone" type="file" accept="image/*" onchange="handleImageUpload(event)" />
-    <label id=l1 for="dropzone">
-        <span class="material-symbols-outlined">
-            photo_library
-        </span>
-        Escolha uma imagem para o 'X'
-    </label>
-    <input id="dropzone2" type="file" accept="image/*" onchange="handleImageUpload(event)" />
-    <label id=l2 for="dropzone2">
-        <span class="material-symbols-outlined">
-            photo_library
-        </span>
-        Escolha uma imagem para o 'O'
-    </label>
+    <div class="file-input-container">
+        <label for="dropzone" class="file-input-label">
+            <span class="file-input-icon">📁</span> Escolher imagem para o X
+        </label>
+        <input type="file" id="dropzone" class="file-input" onchange="handleImageUpload(event)">
+        <img id="previewX" class="preview-image hidden" alt="Preview X">
+    </div>
+
+    <div class="file-input-container">
+        <label for="dropzone2" class="file-input-label">
+            <span class="file-input-icon">📁</span> Escolher imagem para o O
+        </label>
+        <input type="file" id="dropzone2" class="file-input" onchange="handleImageUpload(event)">
+        <img id="previewO" class="preview-image hidden" alt="Preview O">
+    </div>
+
 </body>
 
 </html>

@@ -83,7 +83,7 @@ function reset() {
     fim = 0;
 }
 
-function handleImageUpload(event) {
+function handleImageUpload(event, previewId) {
     var file = event.target.files[0];
     var reader = new FileReader();
 
@@ -93,6 +93,9 @@ function handleImageUpload(event) {
         } else if (event.target.id === 'dropzone2') {
             imageo = e.target.result;
         }
+        var previewElement = document.getElementById(previewId);
+        previewElement.src = e.target.result;
+        previewElement.classList.remove('hidden');
     };
 
     reader.readAsDataURL(file);
@@ -102,6 +105,10 @@ document.addEventListener('DOMContentLoaded', function () {
     fileInput2 = document.getElementById('dropzone2');
     imageElement = document.getElementById('image');
 
-    fileInput1.addEventListener('change', handleImageUpload);
-    fileInput2.addEventListener('change', handleImageUpload);
+    fileInput1.addEventListener('change', function(event) {
+        handleImageUpload(event, 'previewX');
+    });
+    fileInput2.addEventListener('change', function(event) {
+        handleImageUpload(event, 'previewO');
+    });
 });
